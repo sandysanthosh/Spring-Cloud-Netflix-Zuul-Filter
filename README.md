@@ -101,6 +101,16 @@ public class SimpleFilter extends ZuulFilter {
 
 ```
 
+#### Intergration with other microservices:
+
+```
+
+zuul.routes.doctor-service.path=/doctor-api/**
+zuul.routes.doctor-service.url=http://localhost:8081/
+zuul.routes.diagnosis-service.url=http://localhost:8082/getDiagnosis
+
+ribbon.eureka.enabled=false
+server.port=8080
 
 
-
+```
